@@ -1,0 +1,8 @@
+<h1>youpimovie</h1>
+
+<%= simple_form_for(@movies) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :overview %>
+  <%= f.input :rating %>
+  <%= f.submit %>
+<% end %>

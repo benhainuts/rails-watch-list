@@ -1,0 +1,16 @@
+<img src="https://media.istockphoto.com/id/1007557230/fr/photo/projecteur-de-film-sur-fond-fonc%C3%A9.jpg?s=1024x1024&w=is&k=20&c=WD279MD9d6CP7oQEW394I_EnovQ5kak7OKir6WW4Z2Q=" alt="">
+<h1>youpi all lists</h1>
+
+
+<ul>
+  <%@lists.each do |list|%>
+    <li>
+      <%=link_to list.name, list_path(list)%>
+      <%if (list.image_url != nil)%>
+        <img src=<%=list.image_url%> alt="pas d'image">
+      <%end%>
+    </li>
+  <%end%>
+</ul>
+
+<p><%=link_to "Create new list", new_list_path%>% </p>
